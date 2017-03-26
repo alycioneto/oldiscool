@@ -4,8 +4,8 @@ module.exports = function(app) {
     return {
         getAll: async function(req, res) {
             try {
-                const buyer = await BuyerModel.find();
-                res.json({ success: true, buyer });
+                const buyers = await BuyerModel.find();
+                res.json({ success: true, buyers });
             } catch (err) {
                 res.json({ success: false, messages: err.errors});
             }
