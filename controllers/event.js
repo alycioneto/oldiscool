@@ -1,5 +1,7 @@
 module.exports = function(app) {
+    const Promise = require("bluebird");
     const EventModel = app.models.event;
+    const BuyerModel = app.models.buyer;
 
     return {
         getFuture: async function(req, res) {
@@ -98,6 +100,56 @@ module.exports = function(app) {
                 }
             } else {
                 res.status(204).json({ success: false, messages:'no content'});
+            }
+        },
+        buyTicket: async function(req, res) {
+            if(req.body) {
+                res.json({ success: false });
+            } else {
+                const queryEvent = {
+                    _id: req.body.eventId,
+                    "ticketLots._id": req.body.lotId
+                };
+
+                const setEvent = { 
+                    $push: {
+                        buyers: {
+                            email: req.body.email,
+                            name: req.body.name,
+                            ticketLotId: req.body.ticketLotId
+                        }
+                    },
+                    $inc: {
+                        "ticketLots.$.bought": 1
+                    }
+                };
+
+                try {
+                    const updateEvent = EventModel.findOneAndUpdate(queryEvent, setEvent).exec();
+                    const updateBuyer = BuyerModel.update(
+                        { email: req.body.email }, 
+                        { $inc: { eventsCount: 1 } }
+                    );
+
+                    const props = { updateEvent };
+                    const hasBuyer = await BuyerModel.find({ email: req.body.email });
+
+                    if (hasBuyer.length > 0) {
+                        props.updateBuyer = updateBuyer.exec();
+                    } else {
+                        props.updateBuyer = await (new BuyerModel({
+                            email: req.body.email,
+                            name: req.body.name,
+                            eventsCount: 1
+                        })).save();
+                    }
+
+                    await Promise.props(props);
+                    
+                    res.json({ success: true });
+                } catch (err) {
+                    res.json({ success: false, messages: err.errors });
+                }
             }
         }
     };

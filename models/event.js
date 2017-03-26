@@ -21,8 +21,7 @@ module.exports = function(app) {
         },
         name: { type: String, required: true, default: "" },
         facebookUrl: { type: String, required: false, default: "" },
-        donateType: { type: String, required: true, default: "" },
-        donateAmount: { type: Number, required: true, default: 1 },
+        ticketLoteId: { type: Schema.Types.ObjectId, required: true },
         saleDate: { type: Date, required: true, default: new Date() },
         ticketAmount: { type: Number, required: true, default: 1 }
     });
