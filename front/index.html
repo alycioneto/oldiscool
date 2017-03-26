@@ -6,13 +6,70 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script data-require="angular-route@*" data-semver="1.2.14" src="https://code.angularjs.org/1.2.14/angular-route.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <script src="github.js"></script>
-    <script src="EventController.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+ 
 
   </head>
 <body>
+
+<!--=====================navigation bar==========================-->
+<nav class="nav navbar-fixed-top navbar-default hidden-xs" >
+  <div class="container nav-overlay">
+    <img alt="" src="img/logo.png" id="logotipo" class="logo col-md-9 col-sm-1 col-xs-1 isHidden">
+      <div class="row add isHidden">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#About-anchor">About</a></li>
+          <li><a href="#Contact-anchor" >Contact</a></li>
+        </ul>
+      </div>
+  </div>       
+</nav>
+     
+
+<nav class="nav navbar-default style-1 visible-xs">
+    <div class=" container-fluid header">
+      <img alt="" src="img/logo.png" id = "logotipo" class="logo col-md-1 col-sm-1 col-xs-1 hide-ipad-pro isHidden">
+        <a id="removeOX" href="#" class="burger-menu vertical-align"><i></i></a>
+          <nav class="nav-menu hide-ipad-pro">
+            <div class="nav-menu-layer"><span></span></div>
+            <div class="table-align">
+
+               <ul class="nav navbar-nav nav-list cell-view">
+                <li><a href="index.html" class="drop-link ancora">Home<div class="open-drop"></div></a></li>
+                <li><a href="#About-anchor" class="drop-link ancora">About<div class="open-drop"></div></a></li>
+                <li><a href="#Contact-anchor" class="drop-link ancora">Contact<div class="open-drop"></div></a></li>
+              </ul>
+            </div> 
+         </nav>
+    </div> 
+</nav>
+
+<!--=====================video and name of the company =====================-->
+<div class="top-baner bottom-margin hidden-xs">
+  <div class="container">
+        <div class="bg-wrap">
+          <div class="video-iframe">
+            <img src="img/Foto_top.png" id="an-image" class="a-img img-backgroung-video">
+          </div>
+        <div class="black-layer"></div>
+        </div> 
+        <div class=" col-md-12 col-sm-12 col-lg-12 pull-left" >
+          <div class="col-md-12 top-title">
+            <img src="img/logo.png" class="logo2 pull-left">
+          </div>
+
+        </div>
+  </div>
+</div>
+
+
   <div ng-view></div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="all.js"></script>
+    <script src="app.js"></script>
+    <script src="github.js"></script>
+    <script src="EventController.js"></script>
 </body>
 </html>

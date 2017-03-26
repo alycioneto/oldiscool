@@ -12,10 +12,10 @@
       </div>
 
       <div class="clearfix col-md-6 pull letf">
-        <a ng-click='modalAppears($index)'><button>Participar!</button></a>
-        <div class="isHidden num{{$index}}">
+        <a ng-click='modalAppears()'><button>Participar!</button></a>
+        <div class="isHidden">
                  <div class="col-md-12 col-sm-12 col-xs-12 ">
-            <form  method="post" name="contactform" class="contact-form wow zoomIn" data-wow-delay="0.6s" id="contact-form">
+            <form  onsubmit="return submitForm(ev._id);" method="post" name="contactform" class="contact-form wow zoomIn" data-wow-delay="0.6s" id="contact-form">
               <div class="col-md-6">
                 <div class="row">
                   <div class="col-md-12">
@@ -25,22 +25,17 @@
                  <div class="col-md-12">
                    <input placeholder="E-mail" class="input-field" name="email" required type="email"> 
                  </div>
-
-
-
-                 <div class="col-md-12">
-
-                   <select>
-                      <option>Lote 1 - R$ 10 + 1 pacote de fraldas - {{ingressos1}}</option>
-                      <option>Lote 2 - R$ 20 + 1kg de alimento - {{ingressos2}}</option>
-                      <option>Lote 3 - R$ 30 + 1 item de higiene - {{ingressos3}}</option>
-                      <option>Lote 4 - R$ 40 + 1 roupa - {{ingressos4}}</option>
-                   </select>
-                 </div>
                </div>
              </div>
              <div class="col-md-6">
-               <input value="Reservar" class="input-send submit margin-button" required type="button" name="submit" ng-click="submitForm()">
+               <h3>Escolha como contribuir!</h3>
+                <div ng-repeat="donations in ev.ticketLots">
+                  <div>{{donations.name}}</div>
+                  <div>{{donations.price}}</div>
+                  <div>{{donations.bought}}</div>
+                  <div>{{donations.totalAmount}}</div>
+               </div> 
+               <input value="Send Message" class="input-send submit margin-button" required type="submit" name="submit">
              </div>
             <div class="col-md-12 col-sm-12 send no-show hidden-xs "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully! We will get in touch shortly.</h4></button></div>
             <div class="col-xs-12 send no-show-smartphone visible-xs"><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully!</h4></button></div>
@@ -53,3 +48,76 @@
       </div>
 </section>
 </div>
+
+
+<div style="margin:0px; padding:0px; background-color:#EFEFEF;">
+<div class="minor-content"><!--because portfolio section has a lot of nested columns is naturally smaller, so, here, the padding is bigger to satr the same-->
+  <section id="About-anchor" class="about-us"> 
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12">
+              <h2 class="description-title">Sobre</h2>
+              <article>
+                <p class="description-lar wow zoomIn" data-wow-delay="0.2s">O Lar São Vicente de Paula é uma Instituição pertencente à comunidade de Novo Hamburgo, que abriga em regime integral, 49 idosos carente de nossa cidade, exercendo um papel social fundamental na vida destes Vovôs e Vovós.<br>Proporcionamos um ambiente saudável e acolhedor, com serviços de psicologia, nutrição, alimentação, médico, enfermagem 24 horas, lazer, medicação, roupas, fraldas, calçados e tudo o mais que se faz necessário.<br> </p>
+              </article>
+          </div>
+         <div class="col-md-6 hidden-xs hidden-sm">
+              <div class="image-post  wow zoomIn" data-wow-delay="0.2s">
+              <img src="img/About.jpg" alt="">
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+<section class="container-fluid minor-content">
+
+<div class="col-md-6 col-sm-6 col-xs-6 ">
+<div style="margin-top:8%; margin-bottom: 3%;"><h2 class="description-title">Contato</h2></div>
+<div><h3 class="description-lar" style="color:black; margin-bottom: 3%;"> R Barão de Cambaí, 180 - Primavera, Novo Hamburgo - RS<br> Telefone: (51)3595-8181</h3></div>
+            <form action="emailSend.php" onsubmit="return submitForm();" method="post" name="contactform" class="contact-form wow zoomIn" data-wow-delay="0.6s" id="contact-form">
+
+              <div class="col-md-12" style="padding:0px;">
+                  <input placeholder="Name" class="input-field" name="name" required type="text">
+              </div>
+
+              <div class="col-md-12" style="padding:0px;">
+                   <input placeholder="E-mail" class="input-field" name="email" required type="email"> 
+                </div>
+             <div class="col-md-12" style="padding:0px;">
+               <textarea placeholder="Message" class="input-field" name="message"></textarea> 
+               <input value="Send Message" class="input-send submit margin-button" required type="submit" name="submit">
+             </div>
+            <div class="col-md-12 col-sm-12 send no-show "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Mensagem enviada com sucesso!</h4></button></div>
+   </div>       
+        </form> 
+       </div>
+       <div class="col-md-6" style="margin-top:11%;">
+       <img class="map-image" src="img/map.png"> <!--due to data package of the user, google maps plugin is not used in mobile, is just a picture instead-->
+      </div>
+</section>
+<div style="background-color:#EFEFEF; padding:0px; margin:0px;">
+<section class="minor-content">
+  <h2 class="description-title">Parceiros</h2>
+   <ul style="display: inline-block;">
+      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo1.png" class="logo3" style="display: inline-block;"></li>
+      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo2.png" class="logo3" style="display: inline-block;"></li>
+      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo3.png" class="logo3" style="display: inline-block;"></li>
+
+   </ul>
+
+
+</section>
+<footer>
+   <div class="col-md-12 copyright text-center">
+              <small style="margin-bottom:3%;">
+              <a href="fb.me/oldiscool.lsvp"><img class="flag-margin-right"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 27px; margin-top: 3%; margin-right: 3px;"></i></a>
+                ©Lar são vicente, contruído com amor  
+                <i class="fa fa-heart" aria-hidden="true"></i> 
+                Todos Direitos Reservados.
+                
+                            </small> 
+            </div>
+    </footer>
+    </div>
