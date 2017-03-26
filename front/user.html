@@ -4,7 +4,7 @@
     <h3>{{ev.title}} </h3>
     <div>
       <!--  event Container  -->
-        
+
           <em class="clearfix pull-left">{{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }} </em>
     </div>
       <div class="col-md-12 pull-left">
@@ -23,7 +23,7 @@
                   </div>
 
                  <div class="col-md-12">
-                   <input placeholder="E-mail" class="input-field" name="email" required type="email"> 
+                   <input placeholder="E-mail" class="input-field" name="email" required type="email">
                  </div>
                </div>
              </div>
@@ -34,8 +34,8 @@
                   <div>{{donations.price}}</div>
                   <div>{{donations.bought}}</div>
                   <div>{{donations.totalAmount}}</div>
-               </div> 
-               <input value="Send Message" class="input-send submit margin-button" required type="submit" name="submit">
+               </div>
+               <input value="Enviar" class="input-send submit margin-button" required type="submit" name="submit">
              </div>
             <div class="col-md-12 col-sm-12 send no-show hidden-xs "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully! We will get in touch shortly.</h4></button></div>
             <div class="col-xs-12 send no-show-smartphone visible-xs"><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully!</h4></button></div>
@@ -50,9 +50,10 @@
 </div>
 
 
+
 <div style="margin:0px; padding:0px; background-color:#EFEFEF;">
 <div class="minor-content"><!--because portfolio section has a lot of nested columns is naturally smaller, so, here, the padding is bigger to satr the same-->
-  <section id="About-anchor" class="about-us"> 
+  <section id="About-anchor" class="about-us" style="padding-bottom:3rem">
     <div class="container-fluid">
       <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
@@ -71,7 +72,7 @@
   </section>
   </div>
   </div>
-<section class="container-fluid minor-content">
+<section class="container-fluid minor-content" style="margin-bottom: 3rem;">
 
 <div class="col-md-6 col-sm-6 col-xs-6 ">
 <div style="margin-top:8%; margin-bottom: 3%;"><h2 class="description-title">Contato</h2></div>
@@ -83,15 +84,15 @@
               </div>
 
               <div class="col-md-12" style="padding:0px;">
-                   <input placeholder="E-mail" class="input-field" name="email" required type="email"> 
+                   <input placeholder="E-mail" class="input-field" name="email" required type="email">
                 </div>
              <div class="col-md-12" style="padding:0px;">
-               <textarea placeholder="Message" class="input-field" name="message"></textarea> 
-               <input value="Send Message" class="input-send submit margin-button" required type="submit" name="submit">
+               <textarea placeholder="Message" class="input-field" name="message"></textarea>
+               <input value="Enviar" class="input-send submit margin-button" required type="submit" name="submit">
              </div>
             <div class="col-md-12 col-sm-12 send no-show "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Mensagem enviada com sucesso!</h4></button></div>
-   </div>       
-        </form> 
+   </div>
+        </form>
        </div>
        <div class="col-md-6" style="margin-top:11%;">
        <img class="map-image" src="img/map.png"> <!--due to data package of the user, google maps plugin is not used in mobile, is just a picture instead-->
@@ -99,25 +100,31 @@
 </section>
 <div style="background-color:#EFEFEF; padding:0px; margin:0px;">
 <section class="minor-content">
-  <h2 class="description-title">Parceiros</h2>
-   <ul style="display: inline-block;">
-      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo1.png" class="logo3" style="display: inline-block;"></li>
-      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo2.png" class="logo3" style="display: inline-block;"></li>
-      <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo3.png" class="logo3" style="display: inline-block;"></li>
-
-   </ul>
-
-
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="description-title">Parceiros</h2>
+      <div style="display:flex;align-items:center;justify-content:center;margin-top: 1.8rem;margin-bottom: 2.8rem;">
+        <img src="img/logo1.png" class="logo3">
+        <img src="img/logo2.png" class="logo3">
+        <img src="img/logo3.png" class="logo3">
+      </div>
+       <!--<ul style="display: inline-block;">
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo1.png" class="logo3" style="display: inline-block;"></li>
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo2.png" class="logo3" style="display: inline-block;"></li>
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo3.png" class="logo3" style="display: inline-block;"></li>
+       </ul>-->
+     </div>
+   </div>
 </section>
 <footer>
    <div class="col-md-12 copyright text-center">
               <small style="margin-bottom:3%;">
               <a href="fb.me/oldiscool.lsvp"><img class="flag-margin-right"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 27px; margin-top: 3%; margin-right: 3px;"></i></a>
-                ©Lar são vicente, contruído com amor  
-                <i class="fa fa-heart" aria-hidden="true"></i> 
+                ©Lar são vicente, contruído com amor
+                <i class="fa fa-heart" aria-hidden="true"></i>
                 Todos Direitos Reservados.
-                
-                            </small> 
+
+                            </small>
             </div>
     </footer>
     </div>
