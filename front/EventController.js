@@ -22,6 +22,7 @@ var onUserReturn = function(data){
 		$scope.ingressos4 = 10;
 
 $scope.modalAppears = function(i){
+	$(".num1, num2").not("isHidden").addClass("isHidden");
 	$('.isHidden.num'+i).removeClass();
 };	 $scope.submitForm = function(id) {
 $(".input-send").attr("disabled", true);
