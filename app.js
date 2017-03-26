@@ -3,11 +3,11 @@ const consign = require('consign');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const app = express();
-const user = 'admin'
-const password = 'minhasenha'
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.user = 'admin';
+app.password = 'minhasenha';
 
 app.use(session({
     secret: 'supersecret',
