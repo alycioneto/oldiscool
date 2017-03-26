@@ -1,0 +1,26 @@
+{
+  "name": "oldiscool",
+  "version": "0.0.1",
+  "description": "HackatonProject",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alycioneto/oldiscool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alycioneto/oldiscool/issues"
+  },
+  "homepage": "https://github.com/alycioneto/oldiscool#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "consign": "^0.1.2",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.1"
+  }
+}
