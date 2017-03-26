@@ -35,7 +35,7 @@ $(".input-send").attr("disabled", true);
 	    //  $('.send').removeClass('no-show');
 	    //  $('.send').removeClass('no-show-mobile');
 
-		$scope.ingressos1 = $scope.ingresso1 - 1; 
+		$scope.ingressos1 = $scope.ingressos1 - 1; 
 
 		alert('Parabens voce garantiu seu lugar na festa. Enviamos maiores detalhes para seu e-mail');
 	      
