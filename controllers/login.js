@@ -3,16 +3,16 @@ module.exports = function(app) {
     return {
         login: function(req, res) {
             if (!req.query.username || !req.query.password) {
-                res.send('login failed');    
+                res.json({ success: false});    
             } else if(req.query.username === user || req.query.password === password) {
                 req.session.user = user;
                 req.session.admin = true;
-                res.send("login success!");
+                res.json({ success: true});
             }
         },
         logout: function(req, res) {
             req.session.destroy();
-            res.send("logout success!");
+            res.json({ success: true});
         }
     };
 }

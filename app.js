@@ -1,7 +1,7 @@
 const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
-const session = requiere('express-session');
+const session = require('express-session');
 const app = express();
 const user = 'admin'
 const password = 'minhasenha'
@@ -19,6 +19,7 @@ app.disable('etag');
 
 consign({verbose: false})
     .include('config')
+    .then('middlewares')
     .then('models')
     .then('controllers')
     .then('routes')
