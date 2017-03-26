@@ -22,9 +22,8 @@ var onUserReturn = function(data){
 		$scope.ingressos4 = 10;
 
 $scope.modalAppears = function(i){
-	$('.isHidden' + i).removeClass();
-};
-	 $scope.submitForm = function(id) {
+	$('.isHidden.num'+i).removeClass();
+};	 $scope.submitForm = function(id) {
 $(".input-send").attr("disabled", true);
 	    // $.ajax({type:'POST', url:'/api/event/buy-ticket', data:$('#contact-form').serialize(),
 		// error: function(response){
