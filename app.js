@@ -9,11 +9,15 @@ app.use(bodyParser.json());
 app.user = 'admin';
 app.password = 'minhasenha';
 
+app.use("/", express.static('front'));
+
 app.use(session({
     secret: 'supersecret',
     resave: true,
     saveUninitialized: true
 }));
+
+app.get("/");
 
 app.disable('etag');
 

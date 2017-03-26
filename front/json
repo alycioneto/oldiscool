@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "events": [
+    {
+      "_id": "58d75c8dab6c54096c76b329",
+      "__v": 0,
+      "ticketLots": [
+        {
+          "_id": "58d75c8dab6c54096c76b32a",
+          "bought": 10,
+          "totalAmount": 20,
+          "price": 20,
+          "name": "fralda"
+        }
+      ],
+      "buyers": [],
+      "sponsors": [
+        {
+          "_id": "58d75c8dab6c54096c76b32b",
+          "logoUrl": "my.png",
+          "siteUrl": "site",
+          "name": "sicredi"
+        }
+      ],
+      "imageUrl": "minhaurl",
+      "endDate": "2017-03-26T06:15:25.180Z",
+      "startDate": "2017-03-26T06:15:25.180Z",
+      "description": "Test a evente creation",
+      "title": "Test"
+    },
+    {
+      "_id": "58d75d1cf70b200b1e201308",
+      "__v": 0,
+      "ticketLots": [
+        {
+          "_id": "58d75d1cf70b200b1e201309",
+          "bought": 10,
+          "totalAmount": 20,
+          "price": 20,
+          "name": "fralda"
+        }
+      ],
+      "buyers": [],
+      "sponsors": [
+        {
+          "_id": "58d75d1cf70b200b1e20130a",
+          "logoUrl": "my.png",
+          "siteUrl": "site",
+          "name": "sicredi"
+        }
+      ],
+      "imageUrl": "minhaurl",
+      "endDate": "2017-03-26T06:17:58.441Z",
+      "startDate": "2017-03-26T06:17:58.441Z",
+      "description": "updated with success",
+      "title": "Upated"
+    }
+  ]
+} 
