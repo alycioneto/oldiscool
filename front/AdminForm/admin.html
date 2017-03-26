@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulário de login</h1>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js"></script>
+     <script src="js/adminController.js"></script>
+     <div class="container" ng-app="dynamicFormApp" ng-controller="FormCtrl">
+       <form name="userFormTwo" action="#" novalidate ng-submit="submitFormulario()">
+          <div class="form-group" ng-repeat="user in formDataTwo.users" ng-class="{ 'has-error' : userFieldForm.email.$invalid }">
+            <ng-form name="userFieldForm">
+              <label for="user">Usuário</label>
+              <input type="text" class="form-control" id="user" name="user" ng-model="user.name" required>
+              <label for="senha">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" ng-model="user.senha" required>
+            </ng-form>
+            <button type="submit" class="btn btn-default">Enviar</button>
+          </div>
+
+        </form>
+    </div>
+
+  </body>
+</html>

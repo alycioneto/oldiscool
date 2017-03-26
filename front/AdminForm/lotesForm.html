@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lotes</title>
+  </head>
+  <body>
+    <h1>Lotes</h1>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js"></script>
+   <script src="js/lotesController.js"></script>
+    <form name="userFormTwo" action="#" novalidate ng-submit="submitFormulario()">
+      <div class="form-group" ng-repeat="lote in formDataTwo.lotes" ng-class="{ 'has-error' : userFieldForm.email.$invalid }">
+        <ng-form name="LoteForm_um">
+          <label for="titulo">Título</label>
+          <input type="text"  ng-model="lote." required="">
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" name="preco" required>
+          <label for="qtd">Quantidade</label>
+          <input type="number" id="qtd" name="quantidade" required>
+          <label for="vend">Vendidos</label>
+          <input type="text" name="vendidos" value="">
+        </ng-form> <br>
+        <ng-form name="LoteForm_dois">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" name="titulo" required value="Lote 1">
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" name="preco" required>
+          <label for="qtd">Quantidade</label>
+          <input type="number" id="qtd" name="quantidade" required>
+          <label for="vend">Vendidos</label>
+          <input type="text" name="vendidos" value="">
+        </ng-form> <br>
+        <ng-form name="LoteForm_tres">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" name="titulo" required value="Lote 1">
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" name="preco" required>
+          <label for="qtd">Quantidade</label>
+          <input type="number" id="qtd" name="quantidade" required>
+          <label for="vend">Vendidos</label>
+          <input type="text" name="vendidos" value="">
+        </ng-form> <br>
+        <ng-form name="LoteForm_quatro">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" name="titulo" required value="Lote 1">
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" name="preco" required>
+          <label for="qtd">Quantidade</label>
+          <input type="number" id="qtd" name="quantidade" required>
+          <label for="vend">Vendidos</label>
+          <input type="text" name="vendidos" value="">
+        </ng-form> <br>
+        <button type="submit" class="btn btn-default">Enviar</button>
+      </div>
+  </body>
+</html>

@@ -10,6 +10,7 @@ app.user = 'admin';
 app.password = 'minhasenha';
 
 app.use("/", express.static('front'));
+app.use("/admin", express.static('front/AdminForm'));
 
 app.use(session({
     secret: 'supersecret',

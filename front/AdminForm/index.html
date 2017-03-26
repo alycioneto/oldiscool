@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Angular JS Includes</title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+   </head>
+   <body ng-app="MyApp">
+     <div class="container">
+
+      <div ng-controller = "PostsCtrl">
+        <div ng-repeat="post in posts">
+          <div ng-repeat="(key, value) in post">
+            <table class="table">
+              <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+      <script>
+        var app = angular.module('MyApp', []);
+
+        app.controller("PostsCtrl", function($scope, $http) {
+          $http.get('http://cadashora.esy.es/data.json').success(function(data, status, header, config) {
+              $scope.posts = data.buyers;              
+
+          })
+        });
+      </script>
+
+
+   </body>
+</html
