@@ -23,6 +23,7 @@ app.disable('etag');
 
 consign({verbose: false})
     .include('config')
+    .then('utils')
     .then('middlewares')
     .then('models')
     .then('controllers')

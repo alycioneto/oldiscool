@@ -2,6 +2,7 @@ module.exports = function(app) {
     const Promise = require("bluebird");
     const EventModel = app.models.event;
     const BuyerModel = app.models.buyer;
+    const Email = app.utils.email;
 
     return {
         getFuture: async function(req, res) {
@@ -103,7 +104,7 @@ module.exports = function(app) {
             }
         },
         buyTicket: async function(req, res) {
-            if(req.body) {
+            if(!req.body) {
                 res.json({ success: false });
             } else {
                 const queryEvent = {
@@ -116,7 +117,7 @@ module.exports = function(app) {
                         buyers: {
                             email: req.body.email,
                             name: req.body.name,
-                            ticketLotId: req.body.ticketLotId
+                            ticketLotId: req.body.lotId
                         }
                     },
                     $inc: {
@@ -126,7 +127,7 @@ module.exports = function(app) {
 
                 try {
                     const updateEvent = EventModel.findOneAndUpdate(queryEvent, setEvent).exec();
-                    const updateBuyer = BuyerModel.update(
+                    const updateBuyer = BuyerModel.findOneAndUpdate(
                         { email: req.body.email }, 
                         { $inc: { eventsCount: 1 } }
                     );
@@ -144,7 +145,9 @@ module.exports = function(app) {
                         })).save();
                     }
 
-                    await Promise.props(props);
+                    const result = await Promise.props(props);
+
+                    Email.send(result.updateEvent, result.updateBuyer, req.body.lotId);
                     
                     res.json({ success: true });
                 } catch (err) {

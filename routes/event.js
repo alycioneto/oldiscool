@@ -9,4 +9,5 @@ module.exports = function(app) {
     app.get('/api/event/:id', controller.getOne);
     app.post('/api/events/delete', auth, controller.delete);
     app.post('/api/events/update', auth, controller.update);
+    app.post('/api/event/buy-ticket', controller.buyTicket);
 }
