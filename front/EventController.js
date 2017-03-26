@@ -1,7 +1,7 @@
  
 (function(){
-angular.module('saoVicentinoApp')
-.controller('EventController', ['$scope', 'github', function($scope, github){
+angular.module('saoVicentinoApp', ['angularModalService'])
+.controller('EventController', ['$scope', 'ModalService', 'github', function($scope, $modal, github){
 
 var onUserComplete = function(data){
   $scope.event = data.data.events;
@@ -16,7 +16,20 @@ var onUserReturn = function(data){
 };
 
 $scope.modalAppears = function(){
-	$('.isHidden').removeClass();
+
+    ModalService.showModal({
+      templateUrl: "modal-buy-ticket.html",
+      controller: "BuyTicketController",
+      inputs: {
+        title: "Comprar ingresso"
+      }
+    }).then(function(modal) {
+      modal.element.modal();
+      modal.close.then(function(result) {
+        $scope.complexResult  = "Name: " + result.name + ", age: " + result.age;
+      });
+    });
+
 };
 	 function submitForm(id) {
 $(".input-send").attr("disabled", true);
@@ -35,6 +48,39 @@ $(".input-send").attr("disabled", true);
 	};
 github.getUser()
 .then(onUserComplete, onError);
+
+}]).controller('ComplexController', [
+  '$scope', '$element', 'title', 'close', 
+  function($scope, $element, title, close) {
+
+  $scope.name = null;
+  $scope.email = null;
+  $scope.phone = null;
+  $scope.title = title;
+  $scope.subtitle = subtitle;
+  
+  //  This close function doesn't need to use jQuery or bootstrap, because
+  //  the button has the 'data-dismiss' attribute.
+  $scope.close = function() {
+ 	  close({
+      name: $scope.name,
+      age: $scope.age
+    }, 500); // close, but give 500ms for bootstrap to animate
+  };
+
+  //  This cancel function must use the bootstrap, 'modal' function because
+  //  the doesn't have the 'data-dismiss' attribute.
+  $scope.cancel = function() {
+
+    //  Manually hide the modal.
+    $element.modal('hide');
+    
+    //  Now call close, returning control to the caller.
+    close({
+      name: $scope.name,
+      age: $scope.age
+    }, 500); // close, but give 500ms for bootstrap to animate
+  };
 
 }]);
 }());
