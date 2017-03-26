@@ -12,6 +12,23 @@ module.exports = function(app) {
             } catch(err) {
                 res.json({ success: false, messages: err.errors });
             }
-        }
+        },
+        save: async function(req, res) {
+            console.log(req.body);
+            if(req.body) {
+                var event = new EventModel(req.body)
+                try {
+                    await event.save(function(err){
+                        if(!err) {
+                            res.json({ success: true });
+                        } else {
+                            res.json({ success: false, messages: err.errors });
+                        }
+                    });
+                } catch(err) {
+                    res.json({ success: false, messages: err.errors });
+                }
+            }
+        },
     };
 };
