@@ -15,22 +15,32 @@ var onUserReturn = function(data){
  return data.data.events;
 };
 
+
+		$scope.ingresso1 = 40;
+		$scope.ingresso2 = 30;
+		$scope.ingresso3 = 20;
+		$scope.ingresso4 = 10;
+
 $scope.modalAppears = function(){
 	$('.isHidden').removeClass();
 };
 	 function submitForm(id) {
 $(".input-send").attr("disabled", true);
-	    $.ajax({type:'POST', url:'/api/event/buy-ticket', data:$('#contact-form').serialize(),
-		error: function(response){
-			$(".input-send" ).attr("disabled", false);
-		},
-	     success: function(response) { 
-	     $('.submit').html('send');
-	     $('.send').removeClass('no-show');
-	     $('.send').removeClass('no-show-mobile');
+	    // $.ajax({type:'POST', url:'/api/event/buy-ticket', data:$('#contact-form').serialize(),
+		// error: function(response){
+		// 	$(".input-send" ).attr("disabled", false);
+		// },
+	    //  success: function(response) { 
+	    //  $('.submit').html('send');
+	    //  $('.send').removeClass('no-show');
+	    //  $('.send').removeClass('no-show-mobile');
+
+		$scope.ingresso1 = $scope.ingresso1 - 1; 
+
+		alert('Parabens voce garantiu seu lugar na festa. Enviamos maiores detalhes para seu e-mail');
 	      
 	     // if reset form is required: document.contactform.reset();    
-	}});              
+	// }});              
 	    return false;
 	};
 github.getUser()
