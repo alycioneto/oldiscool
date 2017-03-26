@@ -36,12 +36,13 @@ module.exports = function(app) {
 
     const EventSchema = new Schema({
         title: { type: String, required: true, default: '' },
+        description: {type: String, required: true, default: ''},
         startDate: { type: Date, required: true, default: new Date() },
         endDate: { type: Date, required: true, default: new Date() },
         imageUrl: { type: String, required: false, default: "" },
         sponsors: [ EventSponsorsSchema ],
         buyers: [ EventBuyersSchema ],
-        donateTypes: [ EventTicketLots ]
+        ticketLots: [ EventTicketLots ]
     });
 
     return app.config.db.model('events', EventSchema);
