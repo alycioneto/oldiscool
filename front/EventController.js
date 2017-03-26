@@ -16,10 +16,10 @@ var onUserReturn = function(data){
 };
 
 
-		$scope.ingresso1 = 40;
-		$scope.ingresso2 = 30;
-		$scope.ingresso3 = 20;
-		$scope.ingresso4 = 10;
+		$scope.ingressos1 = 40;
+		$scope.ingressos2 = 30;
+		$scope.ingressos3 = 20;
+		$scope.ingressos4 = 10;
 
 $scope.modalAppears = function(){
 	$('.isHidden').removeClass();
@@ -35,7 +35,7 @@ $(".input-send").attr("disabled", true);
 	    //  $('.send').removeClass('no-show');
 	    //  $('.send').removeClass('no-show-mobile');
 
-		$scope.ingresso1 = $scope.ingresso1 - 1; 
+		$scope.ingressos1 = $scope.ingresso1 - 1; 
 
 		alert('Parabens voce garantiu seu lugar na festa. Enviamos maiores detalhes para seu e-mail');
 	      
