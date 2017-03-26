@@ -16,5 +16,5 @@ consign({verbose: false})
     .into(app);
 
 app.listen(1991, function () {
-    console.log('Tenda aberta!')
+    console.log('OldIsCool no ar!')
 });

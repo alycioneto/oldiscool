@@ -4,5 +4,5 @@ module.exports = function(app) {
 
     mongoose.Promise = Promise;
 
-    return mongoose.connect('mongodb://localhost/tenda');
+    return mongoose.connect('mongodb://localhost/oldiscool');
 };
