@@ -4,5 +4,5 @@ module.exports = function(app) {
 
     mongoose.Promise = Promise;
 
-    return mongoose.connect('mongodb://localhost/oldiscool');
+    return mongoose.connect('mongodb://oldiscool:oldiscool@ds141960.mlab.com:41960/oldiscool');
 };
