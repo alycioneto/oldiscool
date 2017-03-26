@@ -4,9 +4,11 @@
   app.config(function($routeProvider){ //do this configuration when bringing this module to life
     $routeProvider
       .when("/", {
-        templateUrl:"carouseltest.html",
+        templateUrl:"user.html",
         controller:"EventController"
       })
+
       .otherwise({redirectTo:"/"});
   });
 }());
+ 

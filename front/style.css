@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark:700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .banner{
-	background: url(img/banner.jpg) no-repeat center center fixed;
+	background: url(img/banner.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover; /*chrome */
 	-moz-background-size: cover;/*safari and mozilla*/
 	-o-background-size: cover; /*safari and mozilla*/
@@ -176,10 +176,8 @@
 
 
 	.input-field:focus {background: #F5F5F5; border-color: #F5F5F5;}
-
-	textarea.input-field {height: 100px; resize: none;padding:0.5rem 0.8rem;}
-
-	.input-send
+	textarea.input-field {height: 100px; resize: none;}
+	.input-send 
 	{
 
 		padding: 0px 64px;
@@ -206,8 +204,8 @@
 		}
 
 	.input-send:hover {
-		background: #F5F5F5;
-		border-color: #F5F5F5;
+		background: #F5F5F5; 
+		border-color: #F5F5F5; 
 		color: #7acbe4;
 	}
 	/*everything that you find until "FONTS" appear was copyed from the template(in readme is specified with template is and where to find it)
@@ -216,15 +214,15 @@
 /*===========RESET==============*/
 
 
+	
 
-
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
 	{
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
+		margin: 0; 
+		padding: 0; 
+		border: 0; 
+		font-size: 100%; 
+		font: inherit; 
 		vertical-align: baseline;
 	}
 	/* HTML5 display-role reset for older browsers */
@@ -244,16 +242,16 @@
 	input::-moz-placeholder {color:#676a6a; opacity: 0.6;}
 	input:-moz-placeholder {color:#676a6a; opacity: 0.6;}
 	input:-ms-input-placeholder {color:#676a6a; opacity: 0.6;}
-	textarea::-webkit-input-placeholder {color:#676a6a; opacity: 0.6;}
+	textarea::-webkit-input-placeholder {color:#676a6a; opacity: 0.6;} 
 	textarea::-moz-placeholder {color:#676a6a; opacity: 0.6;}
-	textarea:-moz-placeholder {color:#676a6a; opacity: 0.6;}
+	textarea:-moz-placeholder {color:#676a6a; opacity: 0.6;} 
 	textarea:-ms-input-placeholder {color:#676a6a; opacity: 0.6;}
 	.content{
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;
 	padding: 0px 50px;
-	position: relative;
+	position: relative; 
 	width: 100%;
 
 	}
@@ -263,7 +261,7 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;
 	padding: 0px 65px;
-	position: relative;
+	position: relative; 
 	width: 100%;
 
 	}
@@ -272,15 +270,14 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;
 	padding: 0px 37px;
-	position: relative;
+	position: relative; 
 	width: 100%;
 
 	}
-
 	body {
 	  overflow-x: hidden;
 	  overflow-y: scroll !important;
-
+	 
 	}
 
 
@@ -298,7 +295,7 @@
 	.line-through:after{position: absolute; width: 100%; height: 1px; left: 0; top: 50%; background: currentColor; content: "";}
 	.clearfix:after{content: ""; display: block; clear: both;}
 	.clear{clear:both; overflow:hidden; height:0px; font-size:0px; display: block;}
-
+	
 	.bg {position:absolute; left:0px; top:0px; width:100%; height:100%; overflow:hidden; background-position: 50% 50%; background-repeat: no-repeat; background-attachment: scroll; -webkit-background-size: cover;-moz-background-size: cover; -o-background-size: cover;-ms-background-size: cover; background-size: cover; backface-visibility: hidden;}
 	.bg.fix {background-attachment: fixed;}
 	body.mobile .bg.fix {background-attachment: scroll;}
@@ -311,7 +308,7 @@
 	.marg-bot-100 {margin-bottom: 100px;}
 	.link-layer {position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 5;}
 
-
+	
 
 
 	/*===========HEADER==============*/
@@ -327,12 +324,12 @@
 
 
 	.fixed-nav{ position: fixed; top: 0px !important; background: rgba(255,255,255,0.9); padding-top: 0px !important; }
-	.fixed-nav .menu li{
-		padding-bottom: 22px;
+	.fixed-nav .menu li{ 
+		padding-bottom: 22px; 
 	    padding-right: 10px;
 	    padding-top: 10px;
 	}
-	.fixed-nav .menu li a{
+	.fixed-nav .menu li a{ 
 	font-size: 12px;
 	color: #4a4a4a;
 	font-family: 'Montserrat', sans-serif;
@@ -347,10 +344,10 @@
 
 
 
+	
 
 
-
-
+	
 
 
 /*====================================section about-us====================================*/
@@ -373,7 +370,7 @@
 	font-size: 36px;
 	margin-top: 5%;
 	color: #4a4a4a;
-	font-family: 'Palaquin Dark', sans-serif;
+	font-family: 'Roboto', sans-serif;
  	padding-bottom: 0px;
 	width: 100%;
 	height: auto;
@@ -383,16 +380,15 @@
 	letter-spacing: 0.5px;
 }
 .image-post {
-	position: relative;
-	width: 100%;
+	position: relative; 
+	width: 100%; 
 	float: left;
 	margin-top: 10%;
 }
 .image-post img {
-	width: 100%;
-	height: auto;
+	width: 100%; 
+	height: auto; 
 	display: block;
-     margin-bottom: 3rem;
 }
 /*====================================section -team====================================*/
 
@@ -536,7 +532,7 @@
 	.item-hov:hover .item-layer {opacity: 1;}
 	.team-desc .vertical-align {margin-top: 15px; transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out;}
 	.team-item:hover .team-desc .vertical-align {margin-top: 0px;}
-
+	
 
 /*====================================section contact====================================*/
 
@@ -612,15 +608,14 @@
 
 .input-send {
     padding: 0px 64px;
-    color: white;
+    color: green;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     background-color: transparent;
     cursor: pointer;
     border: none;
     letter-spacing: 1.33px;
-    border: none;
-    background-color:#4AEB71;
+    border: 1px solid green;
     position: relative;
     display: inline-block;
     padding: 22px 56px;
@@ -631,7 +626,7 @@
     line-height: 45px;
     font-weight: 700;
     float: right;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 .input-field{
 
@@ -646,21 +641,21 @@
     display: inline-block;
     width: 100%;
     height: 40px;
-    border: 1px solid #e4e4e4;
-   font-family: 'Roboto', sans-serif;
-    background: #ebebeb;
+    border: 1px solid #9b9b9b;
+   font-family: 'Montserrat', sans-serif;
+    background: #fff;
     padding: 0px 15px;
     font-weight: 400;
     line-height: 27px;
     margin-bottom: 20px;
     transition: all 0.35s ease-out;
     -webkit-transition: all 0.35s ease-out;
-    text-transform: none;
-    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: 11px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    letter-spacing: initial;
+    letter-spacing: 2.4px;
 }
 .no-show{
 	display: none;
@@ -696,37 +691,36 @@
 
 	.input-field:focus {background: #F5F5F5; border-color: #F5F5F5;}
 	textarea.input-field {height: 100px; resize: none;}
-	.input-send
+	.input-send 
 	{
 
 		padding: 0px 64px;
-	    color: white;
+	    color: #7ACBE4;
 	    font-family: 'Montserrat', sans-serif;
 	    font-size: 11px;
 	    background-color: transparent;
 	    cursor: pointer;
 	    border: none;
 	    letter-spacing: 1.33px;
-	    border: none;
+	    border: 1px solid #7ACBE4;
 	    position: relative;
 	    display: inline-block;
 	    padding: 22px 56px;
 	    padding: 0px 46px;
 	    text-align: center;
 	    height: 41px;
-        background-color:#4AEB71;
 	    text-transform: uppercase;
 	    line-height: 45px;
 	    font-weight: 700;
 	    float: left;
-	    border-radius: 1px;
+	    border-radius: 5px;
 
 		}
 
 	.input-send:hover {
-		background: #3FC45F;
-		border-color: none;
-		color: white;
+		background: #F5F5F5; 
+		border-color: #F5F5F5; 
+		color: #7acbe4;
 	}
 
 
@@ -737,8 +731,8 @@
 	width: 100%;
 }
 .map-image{
-	width: 100%;
-	height: auto;
+	width: 100%; 
+	height: auto; 
 	display: block;
 }
 
@@ -751,7 +745,7 @@
 /*====================================video and name of the company====================================*/
 
 .top-baner {position: relative; width: 100%; min-height: 620px; height: 100vmin;}
-.top-baner.bottom-margin {padding-bottom: 100px;}
+.top-baner.bottom-margin {padding-bottom: 100px;} 
 .top-baner.bottom-margin .block-bg .bg-wrap {top: 0px;}
 .top-baner.smal-size {height: 400px; min-height: 100%;}
 .top-baner.smal-size .title-style-1 {margin-top: 35px;}
@@ -769,14 +763,14 @@
 	    overflow: hidden;}
 
 .bg-wrap {
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0px;
+        overflow: hidden; 
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0px; 
         top: 0px;
         z-index: -3;
-
+    
 	}
 
 	.video-iframe {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;}
@@ -793,20 +787,20 @@
 
 
 .black-layer {
-		position: absolute;
+		position: absolute; 
 		left: 0px;
-		top: 0px;
-		width: 100%;
+		top: 0px; 
+		width: 100%; 
 		height: 100%;
-		background: #000;
+		background: #000; 
 		opacity: 0.7;
-		transition:all 0.3s ease-out;
+		transition:all 0.3s ease-out; 
 		-webkit-transition:all 0.3s ease-out;
 		}
 
 
 
-.top-title h1 {
+.top-title h1 { 
 		font-family: 'Palanquin Dark', sans-serif;
 		height: auto;
 		font-size: 80px;
@@ -815,10 +809,10 @@
 		font-stretch: normal;
 		text-align: center;
 		color: #ffffff;
-		width: 100%;
+		width: 100%; 
 		margin-top: 40%;
-		position: relative;
-		text-align: center;
+		position: relative; 
+		text-align: center; 
 }
 
 .top-sub-title h5 {
@@ -830,16 +824,16 @@
 		letter-spacing: 5px;
 		text-align: center;
 		color: #ffffff;
-		width: 100%;
+		width: 100%; 
 		margin-bottom: 15%;
-		position: relative;
+		position: relative;  
 		font-family: 'Montserrat', sans-serif;
 		font-size: 19px;
-		width: 100%;
-		position: relative;
+		width: 100%; 
+		position: relative;  
 		display: inline-block;
-}
-
+}	
+	
 .gif-arrow-down{
     width: calc(50% - 30px);
 }
@@ -865,22 +859,22 @@
 }
 /*====================================nav====================================*/
 nav{
-	 transition: top .5s ease;
-	 -webkit-transition: top .5s ease;
-	 -moz-transition: top .5s ease;
+	 transition: top .5s ease; 
+	 -webkit-transition: top .5s ease; 
+	 -moz-transition: top .5s ease; 
 	}
 nav .menu{
 	list-style: none;
 	overflow: hidden;
 	display: inline-block;
-	margin-right: 21px;
+	margin-right: 21px; 
 	}
 nav .menu li{ float: left; padding-left:  33px; padding-bottom: 44px; }
 nav .menu li a{ text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: #fff; display: inline-block; font-weight: bold; }
-.nav-overlay{
+.nav-overlay{ 
 		position: absolute;
-		 width: 100%;
-		 top: 0px;
+		 width: 100%; 
+		 top: 0px; 
 		 height: 65px;
 		 z-index: 5;
 	}
@@ -893,7 +887,7 @@ nav .menu li a{ text-transform: uppercase; font-size: 11px; letter-spacing: 2px;
 	.aparece{
 	  visibility: visible;
 	  transition: 1s ease-in;
-	  -webkit-transition: 1s;
+	  -webkit-transition: 1s; 
 
 
 	}
@@ -1006,4 +1000,182 @@ button {
   background-color: #FFFFFF ;
   border-radius: 50%;
   margin-left: 50px;
+}
+
+/*PAST EVENTS DETAIL*/
+.main {background-color:;}
+
+.sidebar {
+    background-color: red;
+}
+
+.project_description {
+    margin-top:5rem;
+    color:white;
+}
+
+header a {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.414rem;
+    margin:0 1.3rem;
+}
+
+/*---HEADINGS-----------------------------------------*/
+h1 {
+    font-size:7.99rem;
+    font-family: 'Palanquin Dark', sans-serif;
+    margin-top:0;
+    margin-bottom:2.6rem;
+    letter-spacing:-0.04rem;
+    color:#B8FF00;
+    background: linear-gradient(0deg, #B8FF00 0%, #00FFCC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size:2.827rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.project_description h3 {
+    margin-bottom:2.6rem;
+    font-size:1.999rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform:uppercase;
+}
+
+h4 {
+    font-size:1.414rem;
+    font-family: 'Inconsolata', monospace;
+    margin:1.3rem 0;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-description p {
+    font-family: 'Roboto', sans-serif;
+}
+.hide(){
+    display: none;
+}
+.input-send {
+    padding: 0px 64px;
+    color: #7ACBE4 ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 1.33px;
+    border: 1px solid #7ACBE4 ;
+    position: relative;
+    display: inline-block;
+    padding: 22px 56px;
+    padding: 0px 46px;
+    text-align: center;
+    height: 41px;
+    text-transform: uppercase;
+    line-height: 45px;
+    font-weight: 700;
+    float: right;
+    border-radius: 5px;
+}
+.input-field{
+
+        width: 555.3px;
+        height: 55.1px;
+        border-radius: 5px;
+        border: solid 1px #9b9b9b ;
+    }
+
+.input-field {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #9b9b9b ;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    padding: 0px 15px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 20px;
+    transition: all 0.35s ease-out;
+    -webkit-transition: all 0.35s ease-out;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2.4px;
+}
+.input-field:focus {background: #F5F5F5 ; border-color: #F5F5F5 ;}
+
+    textarea.input-field {height: 100px; resize: none;padding:0.5rem 0.8rem;}
+
+    .input-send
+    {
+
+        padding: 0px 64px;
+        color: #7ACBE4 ;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        letter-spacing: 1.33px;
+        border: 1px solid #7ACBE4 ;
+        position: relative;
+        display: inline-block;
+        padding: 22px 56px;
+        padding: 0px 46px;
+        text-align: center;
+        height: 41px;
+        text-transform: uppercase;
+        line-height: 45px;
+        font-weight: 700;
+        float: right;
+        border-radius: 5px;
+
+        }
+
+    .input-send:hover {
+        background: #F5F5F5 ;
+        border-color: #F5F5F5 ;
+        color: #7acbe4 ;
+    }
+    input:focus, select:focus, textarea:focus, button:focus {outline: none;}
+    input, textarea, select{font-weight: 400; -webkit-appearance: none; appearance: none; border-radius: 0; border: 0px none;}
+    input::-webkit-input-placeholder {color:#676a6a ; opacity: 0.6;}
+    input::-moz-placeholder {color:#676a6a ; opacity: 0.6;}
+    input:-moz-placeholder {color:#676a6a ; opacity: 0.6;}
+    input:-ms-input-placeholder {color:#676a6a ; opacity: 0.6;}
+    textarea::-webkit-input-placeholder {color:#676a6a ; opacity: 0.6;}
+    textarea::-moz-placeholder {color:#676a6a ; opacity: 0.6;}
+    textarea:-moz-placeholder {color:#676a6a ; opacity: 0.6;}
+    textarea:-ms-input-placeholder {color:#676a6a ; opacity: 0.6;}
+
+    .input-field {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e4e4e4 ;
+   font-family: 'Roboto', sans-serif;
+    background: #ebebeb ;
+    padding: 0px 15px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 20px;
+    transition: all 0.35s ease-out;
+    -webkit-transition: all 0.35s ease-out;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: initial;
 }

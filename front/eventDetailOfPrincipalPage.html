@@ -1,0 +1,18 @@
+
+    <div class="img-responsive rock">
+
+     <section class="capa">
+        <div class="linha"></div>
+        <p class="rock_text">{{ev.name}}</p>
+        <p class="data_text">{{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }}</p>
+        <p class="body_text">
+            {{ev.description}}
+        </p>
+        <button class="btn btn-success">Participe</button>
+        <p class="parceiros">Parceiros</p>
+        <div ng-repeat="sponsors in ev.sponsors">
+          <div class="circulo">{{sponsors.logoUrl}}</div>
+        </div>
+        </section>
+    </div>
+

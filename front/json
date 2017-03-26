@@ -22,7 +22,10 @@
           "name": "sicredi"
         }
       ],
-      "imageUrl": "minhaurl",
+      "imageUrl":  [
+      "http://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png",
+      "http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"
+    ],
       "endDate": "2017-03-26T06:15:25.180Z",
       "startDate": "2017-03-26T06:15:25.180Z",
       "description": "Test a evente creation",
@@ -49,7 +52,10 @@
           "name": "sicredi"
         }
       ],
-      "imageUrl": "minhaurl",
+      "imageUrl":  [
+      "http://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png",
+      "http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"
+    ],
       "endDate": "2017-03-26T06:17:58.441Z",
       "startDate": "2017-03-26T06:17:58.441Z",
       "description": "updated with success",

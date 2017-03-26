@@ -1,0 +1,31 @@
+
+
+        <div style="min-height:100%;">
+            <div style="background-color:#4c4c4c;">
+            <div class="col-md-12 project_description">
+                <div class="col-sm-6">
+                    <h1 class="project-title">{{ eventoUnico.title  }}</h1>
+                    <h3>Dia {{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }}</h3>
+                    <p>{{ ev.description }}</p>
+
+                </div>
+                <div class="col-sm-6">
+                      <img ng-src="{{ev.imageUrl[0]}}" alt="" class="resp-img">
+                </div>
+            </div>
+             <div class="container-fluid">
+                <div ng-repeat="image in ev.imageUrl">
+                    <div class="col-xs-12 col-md-6 col-sm-6">
+                      <div class="item-inner">
+                         <div class="rig-cell item wow zoomIn" data-wow-delay="0.4s">
+                            <div class="item-drid-size-mobile"></div>
+                            <img ng-src="{{image}}" alt="" class="resp-img">
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+
+

@@ -1,19 +1,19 @@
  
 (function(){
-angular.module('saoVicentinoApp', ['angularModalService'])
-.controller('EventController', ['$scope', 'ModalService', 'github', function($scope, $modal, github){
+angular.module('saoVicentinoApp', [angularModalService])
+.controller('EventController', ['$scope', 'ModalService', 'github','$filter', function($scope, ModalService, github, $filter){
 
 var onUserComplete = function(data){
   $scope.event = data.data.events;
-  console.log($scope.event);
+ 
 };
-
 var onError = function(reason){
   $scope.error = "Could not fetch the data.";
 };
 var onUserReturn = function(data){
  return data.data.events;
 };
+
 
 $scope.modalAppears = function(){
 
@@ -46,6 +46,9 @@ $(".input-send").attr("disabled", true);
 	}});              
 	    return false;
 	};
+
+
+
 github.getUser()
 .then(onUserComplete, onError);
 

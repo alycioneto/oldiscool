@@ -1,59 +1,32 @@
-
 <div ng-repeat="ev in event">
-<section class="margin-top-section">
-    <h3>{{ev.title}} </h3>
-    <div>
-      <!--  event Container  -->
 
-          <em class="clearfix pull-left">{{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }} </em>
-    </div>
-      <div class="col-md-12 pull-left">
-        <article>{{ev.description}}</article>
-      </div>
-
-      <div class="clearfix col-md-6 pull letf">
-        <a ng-click='modalAppears()'><button>Participar!</button></a>
-        <div class="isHidden">
-                 <div class="col-md-12 col-sm-12 col-xs-12 ">
-            <form  onsubmit="return submitForm(ev._id);" method="post" name="contactform" class="contact-form wow zoomIn" data-wow-delay="0.6s" id="contact-form">
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-12">
-                    <input placeholder="Name" class="input-field" name="name" required type="text">
+        <div style="min-height:100%;">
+            <div style="background-color:#4c4c4c;">
+              <div class="col-md-12 project_description">
+                  <div class="col-sm-6">
+                      <h1 class="project-title"><a href="#!/pastEventDetails" ng-click="selectOne(ev, ev._id)">{{ ev.title}}</a></h1>
+                      <h3>Dia {{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }}</h3>
+                      <p>{{ ev.description }}</p>
                   </div>
-
-                 <div class="col-md-12">
-                   <input placeholder="E-mail" class="input-field" name="email" required type="email">
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-6">
-               <h3>Escolha como contribuir!</h3>
-                <div ng-repeat="donations in ev.ticketLots">
-                  <div>{{donations.name}}</div>
-                  <div>{{donations.price}}</div>
-                  <div>{{donations.bought}}</div>
-                  <div>{{donations.totalAmount}}</div>
-               </div>
-               <input value="Enviar" class="input-send submit margin-button" required type="submit" name="submit">
-             </div>
-            <div class="col-md-12 col-sm-12 send no-show hidden-xs "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully! We will get in touch shortly.</h4></button></div>
-            <div class="col-xs-12 send no-show-smartphone visible-xs"><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Message sent sucessfully!</h4></button></div>
-        </form>
-          </div>
-      </div>
-      </div>
-      <div  ng-repeat="sponsors in ev.sponsors">
+              </div>
+           <div  ng-repeat="sponsors in ev.sponsors">
            <h3 class=" pull-left col-md-6">{{sponsors.name}}</h3>
       </div>
-</section>
+           </div>
+        </div>
 </div>
 
+      
+
+
+        <div ng-repeat="ev in event">
+            <div class="item col-md-3"><a data-toggle="modal" data-target="#modal-{{ev._id}}" href=""><img ng-src="{{ev.imageUrl[0]}}"></a></div>
+</div>
 
 
 <div style="margin:0px; padding:0px; background-color:#EFEFEF;">
 <div class="minor-content"><!--because portfolio section has a lot of nested columns is naturally smaller, so, here, the padding is bigger to satr the same-->
-  <section id="About-anchor" class="about-us" style="padding-bottom:3rem">
+  <section id="About-anchor" class="about-us"> 
     <div class="container-fluid">
       <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
@@ -72,7 +45,7 @@
   </section>
   </div>
   </div>
-<section class="container-fluid minor-content" style="margin-bottom: 3rem;">
+<section class="container-fluid minor-content">
 
 <div class="col-md-6 col-sm-6 col-xs-6 ">
 <div style="margin-top:8%; margin-bottom: 3%;"><h2 class="description-title">Contato</h2></div>
@@ -84,47 +57,69 @@
               </div>
 
               <div class="col-md-12" style="padding:0px;">
-                   <input placeholder="E-mail" class="input-field" name="email" required type="email">
+                   <input placeholder="E-mail" class="input-field" name="email" required type="email"> 
                 </div>
              <div class="col-md-12" style="padding:0px;">
-               <textarea placeholder="Message" class="input-field" name="message"></textarea>
+               <textarea placeholder="Message" class="input-field" name="message"></textarea> 
                <input value="Enviar" class="input-send submit margin-button" required type="submit" name="submit">
              </div>
             <div class="col-md-12 col-sm-12 send no-show "><button class=" send-contact-form-button btn btn-sucess margin-button"><h4>Mensagem enviada com sucesso!</h4></button></div>
-   </div>
-        </form>
+   </div>       
+        </form> 
        </div>
        <div class="col-md-6" style="margin-top:11%;">
        <img class="map-image" src="img/map.png"> <!--due to data package of the user, google maps plugin is not used in mobile, is just a picture instead-->
       </div>
 </section>
-<div style="background-color:#EFEFEF; padding:0px; margin:0px;">
-<section class="minor-content">
-  <div class="container-fluid">
-    <div class="row">
-      <h2 class="description-title">Parceiros</h2>
-      <div style="display:flex;align-items:center;justify-content:center;margin-top: 1.8rem;margin-bottom: 2.8rem;">
-        <img src="img/logo1.png" class="logo3">
-        <img src="img/logo2.png" class="logo3">
-        <img src="img/logo3.png" class="logo3">
-      </div>
-       <!--<ul style="display: inline-block;">
-          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo1.png" class="logo3" style="display: inline-block;"></li>
-          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo2.png" class="logo3" style="display: inline-block;"></li>
-          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo3.png" class="logo3" style="display: inline-block;"></li>
-       </ul>-->
-     </div>
-   </div>
-</section>
-<footer>
-   <div class="col-md-12 copyright text-center">
-              <small style="margin-bottom:3%;">
-              <a href="fb.me/oldiscool.lsvp"><img class="flag-margin-right"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 27px; margin-top: 3%; margin-right: 3px;"></i></a>
-                ©Lar são vicente, contruído com amor
-                <i class="fa fa-heart" aria-hidden="true"></i>
-                Todos Direitos Reservados.
 
-                            </small>
+
+
+
+<!-- Modal -->
+<div ng-repeat="ev in event">
+<div class="modal fade" id="modal-{{ev._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+               
+        <div style="min-height:100%;">
+            <div style="background-color:#4c4c4c;">
+            <div class="col-md-12 project_description">
+                <div class="col-sm-6">
+                    <h1 class="project-title">{{ ev.title  }}</h1>
+                    <h3>Dia {{ev.startDate | date:"dd/mm/yyyy '|'h'H'" }}</h3>
+                    <p>{{ ev.description }}</p>
+
+                </div>
+                <div class="col-sm-6">
+                      <img ng-src="{{ev.imageUrl[0]}}" alt="" class="resp-img">
+                </div>
             </div>
-    </footer>
+             <div class="container-fluid">
+                <div ng-repeat="image in ev.imageUrl">
+                    <div class="col-xs-12 col-md-6 col-sm-6">
+                      <div class="item-inner">
+                         <div class="rig-cell item wow zoomIn" data-wow-delay="0.4s">
+                            <div class="item-drid-size-mobile"></div>
+                            <img ng-src="{{image}}" alt="" class="resp-img">
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
+</div>
+</div>
+
+

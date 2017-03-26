@@ -5,9 +5,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script data-require="angular-route@*" data-semver="1.2.14" src="https://code.angularjs.org/1.2.14/angular-route.js"></script>
+      <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
+ 
 
   </head>
 <body>
@@ -23,9 +25,9 @@
           <li><a href="#Contact-anchor" >Contact</a></li>
         </ul>
       </div>
-  </div>
+  </div>       
 </nav>
-
+     
 
 <nav class="nav navbar-default style-1 visible-xs">
     <div class=" container-fluid header">
@@ -40,9 +42,9 @@
                 <li><a href="#About-anchor" class="drop-link ancora">About<div class="open-drop"></div></a></li>
                 <li><a href="#Contact-anchor" class="drop-link ancora">Contact<div class="open-drop"></div></a></li>
               </ul>
-            </div>
+            </div> 
          </nav>
-    </div>
+    </div> 
 </nav>
 
 <!--=====================video and name of the company =====================-->
@@ -53,7 +55,7 @@
             <img src="img/Foto_top.png" id="an-image" class="a-img img-backgroung-video">
           </div>
         <div class="black-layer"></div>
-        </div>
+        </div> 
         <div class=" col-md-12 col-sm-12 col-lg-12 pull-left" >
           <div class="col-md-12 top-title">
             <img src="img/logo.png" class="logo2 pull-left">
@@ -63,18 +65,33 @@
   </div>
 </div>
 
-<!--=====================carousel placeholder =====================-->
-  <div>
-
-  </div>
 
   <div ng-view></div>
-
+<div style="background-color:#EFEFEF; padding:0px; margin:0px;">
+<section class="minor-content">
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="description-title">Parceiros</h2>
+      <div style="display:flex;align-items:center;justify-content:center;margin-top: 1.8rem;margin-bottom: 2.8rem;">
+        <img src="img/logo1.png" class="logo3">
+        <img src="img/logo2.png" class="logo3">
+        <img src="img/logo3.png" class="logo3">
+      </div>
+       <!--<ul style="display: inline-block;">
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo1.png" class="logo3" style="display: inline-block;"></li>
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo2.png" class="logo3" style="display: inline-block;"></li>
+          <li style="display: inline-block;     padding-left: 61px;"> <img src="img/logo3.png" class="logo3" style="display: inline-block;"></li>
+       </ul>-->
+     </div>
+   </div>
+</section>
+    </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="angular-modal-service.js"></script>
-   
   <script src="all.js"></script>
     <script src="app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="github.js"></script>
     <script src="EventController.js"></script>
 </body>
