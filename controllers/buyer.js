@@ -13,12 +13,14 @@ module.exports = function(app) {
         save: async function(req, res) {
             if(req.body) {
                 try {
-                    const buyer = await BuyerModel.findOne({email: req.body.email}).exec()
+                    let buyer = await BuyerModel.findOne({email: req.body.email}).exec()
                     if(!buyer){
+                        req.body.eventsCount = 0;
                         buyer = new BuyerModel(req.body); 
                     } 
                     buyer.eventsCount++;
                     buyer.save();
+                    res.json({ success: true, buyer });
                 } catch (err) {
                     res.json({ success: false, messages: err.errors });
                 }
