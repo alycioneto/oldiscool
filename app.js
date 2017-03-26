@@ -25,6 +25,6 @@ consign({verbose: false})
     .then('routes')
     .into(app);
 
-app.listen(8080, function () {
+app.listen(process.env.PORT || 1991, function () {
     console.log('OldIsCool no ar!')
 });
