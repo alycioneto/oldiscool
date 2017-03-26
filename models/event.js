@@ -27,10 +27,11 @@ module.exports = function(app) {
         ticketAmount: { type: Number, required: true, default: 1 }
     });
 
-    const EventDonateTypes = new Schema({
+    const EventTicketLots = new Schema({
         name: { type: String, required: true, default: "" },
-        min: { type: Number, required: true, default: 1 },
-        total: { type: Number, required: true, default: 1 }
+        price: { type: Number, required: true, default: 0 },
+        totalAmount: { type: Number, required: true, default: 0 },
+        bought: { type: Number, required: true, default: 0 }
     });
 
     const EventSchema = new Schema({
@@ -40,7 +41,7 @@ module.exports = function(app) {
         imageUrl: { type: String, required: false, default: "" },
         sponsors: [ EventSponsorsSchema ],
         buyers: [ EventBuyersSchema ],
-        donateTypes: [ EventDonateTypes ]
+        donateTypes: [ EventTicketLots ]
     });
 
     return app.config.db.model('events', EventSchema);
