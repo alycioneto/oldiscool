@@ -63,13 +63,8 @@ module.exports = function(app) {
             if(req.body) {
                 var event = new EventModel(req.body)
                 try {
-                    await event.save(function(err){
-                        if(!err) {
-                            res.status(200).json({ success: true });
-                        } else {
-                            res.json({ success: false, messages: err.errors });
-                        }
-                    });
+                    await event.save();
+                    res.status(200).json({ success: true });
                 } catch(err) {
                     res.json({ success: false, messages: err.errors });
                 }
@@ -80,13 +75,8 @@ module.exports = function(app) {
         delete: async function(req, res) {
             if(req.body) {
                 try {
-                    await EventModel.remove({ _id: req.body._id }, function (err) {
-                        if (!err) {
-                            res.status(200).json({ success: true });
-                        } else {
-                            res.json({ success: false, messages: err})
-                        }
-                    });
+                    await EventModel.remove({ _id: req.body._id });
+                    res.status(200).json({ success: true });
                 } catch(err) {
                     res.json({ success: false, messages: err})
                 }
@@ -101,13 +91,8 @@ module.exports = function(app) {
                 const set = { $set: req.body };
                 const options = {multi: false, upsert: false};
                 try {
-                    await EventModel.update(query, set, options, function(err) {
-                        if (!err) {
-                            res.status(200).json({ success: true });
-                        } else {
-                            res.json({ success: false, messages: err});
-                        }
-                    });
+                    await EventModel.update(query, set, options);
+                    res.status(200).json({ success: true });
                 } catch (err) {
                     res.json({ success: false, messages: err});
                 }
