@@ -65,7 +65,7 @@ module.exports = function(app) {
                 try {
                     await event.save(function(err){
                         if(!err) {
-                            res.json({ success: true });
+                            res.status(200).json({ success: true });
                         } else {
                             res.json({ success: false, messages: err.errors });
                         }
@@ -73,6 +73,46 @@ module.exports = function(app) {
                 } catch(err) {
                     res.json({ success: false, messages: err.errors });
                 }
+            } else {
+                res.status(204).json({ success: false, messages:'no content'});
+            }
+        },
+        delete: async function(req, res) {
+            if(req.body) {
+                try {
+                    await EventModel.remove({ _id: req.body._id }, function (err) {
+                        if (!err) {
+                            res.status(200).json({ success: true });
+                        } else {
+                            res.json({ success: false, messages: err})
+                        }
+                    });
+                } catch(err) {
+                    res.json({ success: false, messages: err})
+                }
+            } else {
+                res.status(204).json({ success: false, messages:'no content'});
+            }
+        },
+        update: async function(req, res) {
+            if(req.body) {
+                const query = { _id: req.body._id };
+                delete req.body._id;
+                const set = { $set: req.body };
+                const options = {multi: false, upsert: false};
+                try {
+                    await EventModel.update(query, set, options, function(err) {
+                        if (!err) {
+                            res.status(200).json({ success: true });
+                        } else {
+                            res.json({ success: false, messages: err});
+                        }
+                    });
+                } catch (err) {
+                    res.json({ success: false, messages: err});
+                }
+            } else {
+                res.status(204).json({ success: false, messages:'no content'});
             }
         }
     };
