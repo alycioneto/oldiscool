@@ -1,6 +1,6 @@
  
 (function(){
-angular.module('saoVicentinoApp', [angularModalService])
+angular.module('saoVicentinoApp', ['angularModalService'])
 .controller('EventController', ['$scope', 'ModalService', 'github','$filter', function($scope, ModalService, github, $filter){
 
 var onUserComplete = function(data){
