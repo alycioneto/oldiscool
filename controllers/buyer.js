@@ -19,7 +19,7 @@ module.exports = function(app) {
                         buyer = new BuyerModel(req.body); 
                     } 
                     buyer.eventsCount++;
-                    buyer.save();
+                    await buyer.save();
                     res.json({ success: true, buyer });
                 } catch (err) {
                     res.json({ success: false, messages: err.errors });
